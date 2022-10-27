@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&family=Oswald&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Calculation of Stamp Duty</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6BXFBRJR1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-K6BXFBRJR1');
+    </script>
+    
+</head>
+<body style='background-size: cover;background-image: url("BackGround.png");'><center><a href="https://wa.me/message/2DKPRKVUCVKZH1"><img class="add" src="Pink Black Aesthetic Lines Beauty Skincare Shop Etsy Cover (3).png"></a><br><br><h1 style="font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Oswald', sans-serif; color: #23668d; font-weight: 900;">Calculate Stamp Duty for Doon Square IT Park Dehra Dun</h1><br><br>
+   <script>
+    crv=0;
+    
+    function set_sixty() {
+        crv=69000;
+        document.getElementById("dd").innerHTML= "Shop";
+        
+    }
+    function set_thirty() {
+        crv=32000;
+        document.getElementById("dd").innerHTML="Flat";
+    }
+   document.addEventListener('contextmenu', (e) => e.preventDefault());
+   
+   
+   function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+  )
+    return false;
+};
+function cal() {
+   
+    if(document.getElementById("input-area").value==0)
+    {document.getElementById("ias").innerHTML = "**";}
+    else if(document.getElementById("input-sale-price").value==0)
+    {document.getElementById("ispas").innerHTML = "**";}
+    else if(document.getElementById("dd").innerHTML=="Select Option")
+    {document.getElementById("dds").innerHTML = "**";}
+    else{
+    
+    
+    
+    
+    var area = document.getElementById("input-area").value;
+    area = Math.round(area/10.76);
+
+    var sale = document.getElementById("input-sale-price").value;
+
+
+    var circleRate = ((15*area)*84)+(area*crv);
+
+    var payment = 0;
+    if(circleRate>sale){
+        payment = circleRate;
+    }else{
+        payment = sale;
+        
+    }payment =Math.round((payment*0.05)+300);
+
+
+
+    document.getElementById("display-payment").innerHTML="Stamp Duty Payable = ₹"+payment;
+    document.getElementById("ias").innerHTML = "";
+    document.getElementById("dds").innerHTML = "";
+    document.getElementById("ispas").innerHTML = "";}
+    
+}
+function reset() {
+    document.getElementById("input-area").value = "";
+    document.getElementById("input-sale-price").value = "";
+    document.getElementById("display-payment").innerHTML =  "";
+    document.getElementById("dd").innerHTML="Select Option";
+    document.getElementById("ias").innerHTML = "";
+    document.getElementById("dds").innerHTML = "";
+    document.getElementById("ispas").innerHTML = "";
+
+}
+   </script> 
+   <h3 style="font-weight: 900;">For Calculation of Stamp Duty kindly fill the following details:</h4><br>
+   <div style="font-weight: 900;"><h4 style="font-weight: 900;">Enter area in Sq. Feet</h4><input id="input-area" type="number"  width="300px"><label style="color: red;" id="ias"></label> <br><br></div>
+   <div style="font-weight: 900;"><h4 style="font-weight: 900;">Enter Sale Price<br><input id="input-sale-price" type="number"  width="300px"><label style="color: red;" id="ispas"></label> <br><br></div>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn" id="dd">Select Option</button><label style="color: red;" id="dds"></label>
+        <div id="myDropdown" class="dropdown-content">
+          <a class="btn btn-mute" onclick="set_sixty()">Shop</a>
+          <a class="btn btn-mute" onclick="set_thirty()">Flat</a>
+        </div>
+      </div>
+
+   <br><br>
+   <button onclick="cal()" class="btn btn-medium btn-primary" style="font-weight: 900;">Calculate</button>
+   <button onclick="reset()" class="btn btn-medium btn-danger" style="font-weight: 900;">Reset</button>
+   <br><br>
+   <h4 id="display-payment" style="font-weight: 900;"></h4></div>
+   <div style="font-weight: 900;">
+    <a href="https://forms.gle/ADss1vtPK9XU6yS86" style="text-decoration: none; color: #23668d; "><h4 style="font-weight: 900;" ><br><br>Click Here to submit your documents</h4></a><br><h4 style="font-weight: 900;">Disclaimer: Stamp Duty is for reference purpose only and may vary on the basis of actual documents.</h4><div style = " font-weight: 900;"><h4 style="font-weight: 900; color: #5b4fff;">Powered by<img src="output-onlinepngtools (32).png"></h4></div>
+<a href="https://wa.me/message/2DKPRKVUCVKZH1"><img class="add" src="Pink Black Aesthetic Lines Beauty Skincare Shop Etsy Cover (3).png"></a>
+</center><style>
+    .dropbtn {
+  background-color: #23668d;
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius:5px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+    .add{
+        height: 160px;
+        width: 100%;
+    }
+   </style>
+</body>
+</html>
